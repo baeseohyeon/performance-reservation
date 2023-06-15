@@ -1,6 +1,7 @@
 package com.numble.performancereservation.performance;
 
 import com.numble.performancereservation.base.BaseEntity;
+import com.numble.performancereservation.user.User;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -30,14 +31,18 @@ public class Performance extends BaseEntity {
     @JoinColumn(name = "venue_id")
     @ManyToOne(fetch = FetchType.LAZY)
     private Venue venue;
+    @JoinColumn(name = "user_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    private User user;
 
     @Builder
-    public Performance(String name, int capacity, PerformanceDateTime dateTime,
-        PerformancePrice price, Venue venue) {
+    public Performance(User user, Venue venue, String name, int capacity,
+        PerformanceDateTime dateTime, PerformancePrice price) {
+        this.user = user;
+        this.venue = venue;
         this.name = name;
         this.capacity = capacity;
         this.dateTime = dateTime;
         this.price = price;
-        this.venue = venue;
     }
 }
