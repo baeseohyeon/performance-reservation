@@ -1,5 +1,7 @@
 package com.numble.performancereservation.user;
 
+import static com.numble.performancereservation.exception.ExceptionMessage.INVALID_USER;
+
 import com.numble.performancereservation.base.BaseEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -11,6 +13,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
+import java.util.Objects;
 import java.util.Set;
 import lombok.AccessLevel;
 import lombok.Builder;
@@ -48,5 +51,11 @@ public class User extends BaseEntity {
         this.authorities = authorities;
         this.businessLicense = businessLicense;
         this.type = type;
+    }
+
+    public void validateBusinessLicense(){
+        if(Objects.isNull(businessLicense)){
+            throw new IllegalArgumentException(INVALID_USER);
+        }
     }
 }
