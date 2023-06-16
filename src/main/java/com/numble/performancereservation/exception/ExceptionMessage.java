@@ -7,4 +7,10 @@ public class ExceptionMessage {
     public static final String INVALID_USERID = "userId doesn't exists";
     public static final String INVALID_USER = "user isn't producer";
     public static final String INVALID_VENUE_USE_TIME = "use time of the venue must be at least 1 hour.";
+    public static final String INVALID_VENUE_ID = "venueId doesn't exists";
+    public static final String INVALID_PERFORMANCE_ID = "performanceId doesn't exists";
+    public static final String SEAT_PRICE_CANNOT_BE_NEGATIVE = "seat price can't be negative";
+    public static final String VIP_SEAT_PRICE_CANNOT_BE_CHEAPER_THAN_NORMAL = "vip seat price can't be cheaper than normal";
+    public static final String ALREADY_RESERVED_DURATION = "already reserved duration";
+    public static final String PERFORMANCE_TIME_MUST_WITHIN_VENUE_USE_TIME = "performance time must within venue use time";
 }
