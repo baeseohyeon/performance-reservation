@@ -1,5 +1,6 @@
 package com.numble.performancereservation.user;
 
+import com.numble.performancereservation.base.BaseEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -11,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
-public class Authority {
+public class Authority extends BaseEntity {
 
     @Id
     @Enumerated(EnumType.STRING)

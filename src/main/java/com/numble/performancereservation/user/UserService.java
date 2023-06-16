@@ -41,8 +41,9 @@ public class UserService {
         }
     }
 
-    public User findProducerById(Long userId) {
-        User user = findById(userId);
+    public User findProducerByIdAndType(Long userId, ProducerType type) {
+        User user = userRepository.findByIdAndType(userId, type)
+            .orElseThrow(() -> new IllegalArgumentException(INVALID_USERID));
         user.validateBusinessLicense();
         return user;
     }

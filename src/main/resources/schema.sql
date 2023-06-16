@@ -13,12 +13,16 @@ create table payment
     id              bigint AUTO_INCREMENT,
     card_expiration varchar(255),
     card_number     varchar(255),
+    created_at      timestamp(6) default current_timestamp(6),
+    updated_at      timestamp(6) default current_timestamp(6) on update current_timestamp (6),
     primary key (id)
 );
 
 create table authority
 (
-    role varchar(255) not null check (role in ('USER', 'ADMIN')),
+    role       varchar(255) not null check (role in ('USER', 'ADMIN')),
+    created_at timestamp(6) default current_timestamp(6),
+    updated_at timestamp(6) default current_timestamp(6) on update current_timestamp (6),
     primary key (role)
 );
 
@@ -27,11 +31,11 @@ create table performance
     capacity     integer not null,
     normal_price integer not null,
     vip_price    integer not null,
-    created_at   timestamp(6),
+    created_at   timestamp(6) default current_timestamp(6),
     end_time     timestamp(6),
     id           bigint AUTO_INCREMENT,
     start_time   timestamp(6),
-    updated_at   timestamp(6),
+    updated_at   timestamp(6) DEFAULT current_timestamp(6) on update current_timestamp (6),
     user_id      bigint,
     venue_id     bigint,
     name         varchar(255),
@@ -40,11 +44,11 @@ create table performance
 
 create table reservation
 (
-    created_at     timestamp(6),
+    created_at     timestamp(6) default current_timestamp(6),
     id             bigint AUTO_INCREMENT,
     payment_id     bigint,
+    updated_at     timestamp(6) DEFAULT current_timestamp(6) ON UPDATE current_timestamp (6),
     performance_id bigint,
-    updated_at     timestamp(6),
     user_id        bigint,
     primary key (id)
 );
@@ -52,13 +56,13 @@ create table reservation
 create table seat
 (
     is_reserved    boolean,
-    created_at     timestamp(6),
+    created_at     timestamp(6) default current_timestamp(6),
     id             bigint AUTO_INCREMENT,
     reservation_id bigint,
-    updated_at     timestamp(6),
+    updated_at     timestamp(6) default current_timestamp(6) on update current_timestamp (6),
     venue_id       bigint,
     number         varchar(255),
-    type      varchar(255) check (type in ('VIP', 'NORMAL')),
+    type           varchar(255) check (type in ('VIP', 'NORMAL')),
     primary key (id)
 );
 
@@ -71,13 +75,14 @@ create table user_authority
 
 create table users
 (
-    created_at       timestamp(6),
+    created_at       timestamp(6) default current_timestamp(6),
     id               bigint AUTO_INCREMENT,
-    updated_at       timestamp(6),
+    updated_at       timestamp(6) default current_timestamp(6) on
+        update current_timestamp (6),
     business_license varchar(255),
     email            varchar(255),
     password         varchar(255),
-    type    varchar(255) check (type in ('VENUE', 'PERFORMANCE')),
+    type             varchar(255) check (type in ('VENUE', 'PERFORMANCE')),
     username         varchar(255),
     primary key (id)
 );
@@ -87,10 +92,10 @@ create table venue
     capacity   integer not null,
     end_time   time(6),
     start_time time(6),
-    type tinyint check (type between 0 and 0),
-    created_at timestamp(6),
+    type       varchar(255) check (type in ('FIXED_SEAT')),
+    created_at timestamp(6) default current_timestamp(6),
     id         bigint AUTO_INCREMENT,
-    updated_at timestamp(6),
+    updated_at timestamp(6) default current_timestamp(6) on update current_timestamp (6),
     user_id    bigint,
     name       varchar(255),
     primary key (id)

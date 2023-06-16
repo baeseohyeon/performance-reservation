@@ -1,5 +1,6 @@
 package com.numble.performancereservation.performance;
 
+import com.numble.performancereservation.user.ProducerType;
 import com.numble.performancereservation.user.User;
 import com.numble.performancereservation.user.UserService;
 import lombok.RequiredArgsConstructor;
@@ -16,7 +17,7 @@ public class VenueRegistrationService {
     private final UserService userService;
 
     public Venue registrationVenue(VenueDto venueDto, Long userId) {
-        User producer = userService.findProducerById(userId);
+        User producer = userService.findProducerByIdAndType(userId, ProducerType.VENUE);
         Venue venue = venueService.save(producer, venueDto);
         seatService.saveAll(venueDto.getSeats(), venue.getId());
         return venue;
