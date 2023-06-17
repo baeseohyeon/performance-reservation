@@ -3,6 +3,7 @@ package com.numble.performancereservation.performance;
 import java.time.LocalDateTime;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 public interface PerformanceRepository extends JpaRepository<Performance, Long> {
 
@@ -11,5 +12,5 @@ public interface PerformanceRepository extends JpaRepository<Performance, Long> 
         + "(p.start_time between :startTime and :endTime) or "
         + "(p.end_time between :startTime and :endTime) or "
         + "(:startTime >= p.start_time and :endTime <= p.end_time) limit 1", nativeQuery = true)
-    boolean existsByVenueIdAndStartTimeAndEndTime(Long venueId, LocalDateTime startTime, LocalDateTime endTime);
+    boolean existsByVenueIdAndStartTimeAndEndTime(@Param("venueId") Long venueId, @Param("startTime") LocalDateTime startTime, @Param("endTime") LocalDateTime endTime);
 }
