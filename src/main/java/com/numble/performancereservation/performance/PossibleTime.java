@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Embeddable
 public class PossibleTime {
+
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
     private static final int MIN_USE_HOUR = 1;
     private LocalTime startTime;
@@ -25,8 +26,12 @@ public class PossibleTime {
     }
 
     private void validateTime(LocalTime startTime, LocalTime endTime) {
-        if(startTime.plusHours(MIN_USE_HOUR).isAfter(endTime)){
+        if (startTime.plusHours(MIN_USE_HOUR).isAfter(endTime)) {
             throw new IllegalArgumentException(INVALID_VENUE_USE_TIME);
         }
+    }
+
+    public boolean isNotWithinTimeRange(LocalTime performanceStartTime, LocalTime performanceEndTime) {
+        return performanceStartTime.isBefore(startTime) || performanceEndTime.isAfter(endTime);
     }
 }

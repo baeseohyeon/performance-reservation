@@ -1,15 +1,19 @@
 package com.numble.performancereservation.performance;
 
+import static com.numble.performancereservation.exception.ExceptionMessage.PERFORMANCE_TIME_MUST_WITHIN_VENUE_USE_TIME;
+
 import com.numble.performancereservation.base.BaseEntity;
 import com.numble.performancereservation.user.User;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import java.time.LocalTime;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
@@ -24,7 +28,7 @@ public class Venue extends BaseEntity {
     private Long id;
     private String name;
     private int capacity;
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private VenueType type;
     @Embedded
     private PossibleTime possibleTime;
@@ -39,5 +43,11 @@ public class Venue extends BaseEntity {
         this.capacity = capacity;
         this.type = type;
         this.possibleTime = new PossibleTime(possibleTime);
+    }
+
+    public void validatePerformanceTimeWithinRange(LocalTime startTime, LocalTime endTime) {
+        if(possibleTime.isNotWithinTimeRange(startTime, endTime)){
+            throw new IllegalArgumentException(PERFORMANCE_TIME_MUST_WITHIN_VENUE_USE_TIME);
+        }
     }
 }

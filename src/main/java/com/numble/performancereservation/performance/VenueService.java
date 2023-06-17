@@ -1,5 +1,7 @@
 package com.numble.performancereservation.performance;
 
+import static com.numble.performancereservation.exception.ExceptionMessage.INVALID_VENUE_ID;
+
 import com.numble.performancereservation.user.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -20,5 +22,9 @@ public class VenueService {
             .type(venueDto.getVenueType())
             .possibleTime(venueDto.getPossibleTimes()).build();
         return venueRepository.save(venue);
+    }
+
+    public Venue findById(Long venueId) {
+        return venueRepository.findById(venueId).orElseThrow(() -> new IllegalArgumentException(INVALID_VENUE_ID));
     }
 }
