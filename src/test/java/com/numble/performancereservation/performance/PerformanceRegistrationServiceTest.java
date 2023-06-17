@@ -24,7 +24,7 @@ class PerformanceRegistrationServiceTest {
         Long producerId = 3L;
         Long venueId = 1L;
         int capacity = 10000;
-        LocalDateTime startTime = LocalDateTime.now();
+        LocalDateTime startTime = LocalDateTime.of(2023,6,17,10,0,0);
         LocalDateTime endTime = startTime.plusHours(1);
         String name = "bae hall";
         int normalPrice = 10000;
@@ -46,8 +46,8 @@ class PerformanceRegistrationServiceTest {
         Long producerId = 3L;
         Long venueId = 1L;
         int capacity = 10000;
-        LocalDateTime startTime = LocalDateTime.now();
-        LocalDateTime endTime = startTime.plusHours(2);
+        LocalDateTime startTime = LocalDateTime.of(2023,6,17,10,0,0);
+        LocalDateTime endTime = startTime.plusHours(1);
         String name = "bae hall";
         int normalPrice = 10000;
         int vipPrice = 50000;
