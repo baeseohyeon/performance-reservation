@@ -20,7 +20,10 @@ insert into user_authority (user_id, role)
 values (2, 'USER');
 
 insert into venue (name, capacity, start_time, end_time, type, user_id)
-values ('grand hall', 10000, '10:00:00', '12:00:00', 'FIXED_SEAT', 3);
+values ('grand hall', 10000, '10:00:00', '22:00:00', 'FIXED_SEAT', 3);
+
+insert into performance (capacity, normal_price, vip_price, start_time, end_time, user_id, venue_id)
+values (10000, 10000, 50000, '2023-06-17T13:00:00', '2023-06-17T14:00:00', 3, 1);
 
 insert into seat (venue_id, number, type) values (1, 'A1', 'VIP');
 insert into seat (venue_id, number, type) values (1, 'A2', 'VIP');
