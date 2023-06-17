@@ -13,6 +13,7 @@ create table payment
     id              bigint AUTO_INCREMENT,
     card_expiration varchar(255),
     card_number     varchar(255),
+    payment_method  varchar(255) check (payment_method in ('CREDIT_CARD')),
     created_at      timestamp(6) default current_timestamp(6),
     updated_at      timestamp(6) default current_timestamp(6) on update current_timestamp (6),
     primary key (id)
