@@ -40,4 +40,12 @@ public class SeatService {
             throw new IllegalArgumentException(INVALID_SEAT_ID);
         }
     }
+
+    public int reservationSeat(List<Long> seatIds, Reservation reservation) {
+        return seatRepository.updateIsReservedToTrueAndReservationByIdIn(seatIds, reservation);
+    }
+
+    public long countReservedSeatByIdIn(List<Long> seatIds) {
+        return seatRepository.countByIdInAndIsReserved(seatIds, true);
+    }
 }
