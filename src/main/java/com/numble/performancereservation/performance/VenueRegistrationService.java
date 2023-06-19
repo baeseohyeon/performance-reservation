@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 @Transactional
 @Service
-public class VenueRegistrationService {
+public class VenueRegistrationService  {
 
     private final VenueService venueService;
     private final SeatService seatService;
