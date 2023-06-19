@@ -1,11 +1,112 @@
 insert into users (email, password, username, business_license, type)
 values ('producer', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW', 'vname',
         'vlicense', 'VENUE');
-insert into users (email, password, username)
-values ('user', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW', 'uname');
 insert into users (email, password, username, business_license, type)
 values ('performance', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW', 'pname',
         'plicense', 'PERFORMANCE');
+insert into users (email, password, username)
+values ('user', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW', 'uname');
+insert into users (email, password, username) values ('user1', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user1');
+insert into users (email, password, username) values ('user2', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user2');
+insert into users (email, password, username) values ('user3', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user3');
+insert into users (email, password, username) values ('user4', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user4');
+insert into users (email, password, username) values ('user5', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user5');
+insert into users (email, password, username) values ('user6', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user6');
+insert into users (email, password, username) values ('user7', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user7');
+insert into users (email, password, username) values ('user8', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user8');
+insert into users (email, password, username) values ('user9', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user9');
+insert into users (email, password, username) values ('user10', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user10');
+insert into users (email, password, username) values ('user11', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user11');
+insert into users (email, password, username) values ('user12', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user12');
+insert into users (email, password, username) values ('user13', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user13');
+insert into users (email, password, username) values ('user14', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user14');
+insert into users (email, password, username) values ('user15', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user15');
+insert into users (email, password, username) values ('user16', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user16');
+insert into users (email, password, username) values ('user17', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user17');
+insert into users (email, password, username) values ('user18', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user18');
+insert into users (email, password, username) values ('user19', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user19');
+insert into users (email, password, username) values ('user20', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user20');
+insert into users (email, password, username) values ('user21', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user21');
+insert into users (email, password, username) values ('user22', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user22');
+insert into users (email, password, username) values ('user23', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user23');
+insert into users (email, password, username) values ('user24', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user24');
+insert into users (email, password, username) values ('user25', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user25');
+insert into users (email, password, username) values ('user26', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user26');
+insert into users (email, password, username) values ('user27', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user27');
+insert into users (email, password, username) values ('user28', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user28');
+insert into users (email, password, username) values ('user29', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user29');
+insert into users (email, password, username) values ('user30', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user30');
+insert into users (email, password, username) values ('user31', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user31');
+insert into users (email, password, username) values ('user32', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user32');
+insert into users (email, password, username) values ('user33', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user33');
+insert into users (email, password, username) values ('user34', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user34');
+insert into users (email, password, username) values ('user35', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user35');
+insert into users (email, password, username) values ('user36', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user36');
+insert into users (email, password, username) values ('user37', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user37');
+insert into users (email, password, username) values ('user38', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user38');
+insert into users (email, password, username) values ('user39', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user39');
+insert into users (email, password, username) values ('user40', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user40');
+insert into users (email, password, username) values ('user41', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user41');
+insert into users (email, password, username) values ('user42', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user42');
+insert into users (email, password, username) values ('user43', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user43');
+insert into users (email, password, username) values ('user44', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user44');
+insert into users (email, password, username) values ('user45', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user45');
+insert into users (email, password, username) values ('user46', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user46');
+insert into users (email, password, username) values ('user47', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user47');
+insert into users (email, password, username) values ('user48', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user48');
+insert into users (email, password, username) values ('user49', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user49');
+insert into users (email, password, username) values ('user50', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user50');
+insert into users (email, password, username) values ('user51', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user51');
+insert into users (email, password, username) values ('user52', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user52');
+insert into users (email, password, username) values ('user53', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user53');
+insert into users (email, password, username) values ('user54', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user54');
+insert into users (email, password, username) values ('user55', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user55');
+insert into users (email, password, username) values ('user56', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user56');
+insert into users (email, password, username) values ('user57', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user57');
+insert into users (email, password, username) values ('user58', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user58');
+insert into users (email, password, username) values ('user59', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user59');
+insert into users (email, password, username) values ('user60', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user60');
+insert into users (email, password, username) values ('user61', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user61');
+insert into users (email, password, username) values ('user62', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user62');
+insert into users (email, password, username) values ('user63', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user63');
+insert into users (email, password, username) values ('user64', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user64');
+insert into users (email, password, username) values ('user65', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user65');
+insert into users (email, password, username) values ('user66', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user66');
+insert into users (email, password, username) values ('user67', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user67');
+insert into users (email, password, username) values ('user68', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user68');
+insert into users (email, password, username) values ('user69', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user69');
+insert into users (email, password, username) values ('user70', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user70');
+insert into users (email, password, username) values ('user71', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user71');
+insert into users (email, password, username) values ('user72', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user72');
+insert into users (email, password, username) values ('user73', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user73');
+insert into users (email, password, username) values ('user74', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user74');
+insert into users (email, password, username) values ('user75', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user75');
+insert into users (email, password, username) values ('user76', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user76');
+insert into users (email, password, username) values ('user77', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user77');
+insert into users (email, password, username) values ('user78', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user78');
+insert into users (email, password, username) values ('user79', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user79');
+insert into users (email, password, username) values ('user80', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user80');
+insert into users (email, password, username) values ('user81', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user81');
+insert into users (email, password, username) values ('user82', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user82');
+insert into users (email, password, username) values ('user83', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user83');
+insert into users (email, password, username) values ('user84', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user84');
+insert into users (email, password, username) values ('user85', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user85');
+insert into users (email, password, username) values ('user86', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user86');
+insert into users (email, password, username) values ('user87', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user87');
+insert into users (email, password, username) values ('user88', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user88');
+insert into users (email, password, username) values ('user89', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user89');
+insert into users (email, password, username) values ('user90', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user90');
+insert into users (email, password, username) values ('user91', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user91');
+insert into users (email, password, username) values ('user92', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user92');
+insert into users (email, password, username) values ('user93', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user93');
+insert into users (email, password, username) values ('user94', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user94');
+insert into users (email, password, username) values ('user95', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user95');
+insert into users (email, password, username) values ('user96', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user96');
+insert into users (email, password, username) values ('user97', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user97');
+insert into users (email, password, username) values ('user98', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user98');
+insert into users (email, password, username) values ('user99', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user99');
+insert into users (email, password, username) values ('user100', '$2a$10$SuKEgeyxhiYJh5p5Fv9So.Zn5CcynNFCzO.9p1UDa0dqSqZ4.aVfW','user100');
+
 
 insert into authority (role)
 values ('USER');
@@ -18,6 +119,7 @@ insert into user_authority (user_id, role)
 values (1, 'ADMIN');
 insert into user_authority (user_id, role)
 values (2, 'USER');
+
 
 insert into venue (name, capacity, start_time, end_time, type, user_id)
 values ('grand hall', 10000, '10:00:00', '22:00:00', 'FIXED_SEAT', 3);
