@@ -16,4 +16,5 @@ public class ExceptionMessage {
     public static final String ALREADY_RESERVED_DURATION = "already reserved duration";
     public static final String PERFORMANCE_TIME_MUST_WITHIN_VENUE_USE_TIME = "performance time must within venue use time";
     public static final String ALREADY_RESERVED_SEAT = "already reserved seat";
+    public static final String UNABLE_TO_HOLD_LOCK = "Unable to hold lock";
 }

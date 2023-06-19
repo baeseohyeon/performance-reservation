@@ -1,5 +1,6 @@
 package com.numble.performancereservation.performance;
 
+import static com.numble.performancereservation.factory.DtoFactory.createPerformanceDto;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
@@ -21,7 +22,7 @@ class PerformanceRegistrationServiceTest {
     @Test
     void registrationPerformance() {
         //given
-        Long producerId = 3L;
+        Long producerId = 2L;
         Long venueId = 1L;
         int capacity = 10000;
         LocalDateTime startTime = LocalDateTime.of(2023,6,17,10,0,0);
@@ -43,7 +44,7 @@ class PerformanceRegistrationServiceTest {
     @Test
     void registrationPerformance_alreadyReservedTime() {
         //given
-        Long producerId = 3L;
+        Long producerId = 2L;
         Long venueId = 1L;
         int capacity = 10000;
         LocalDateTime startTime = LocalDateTime.of(2023,6,17,10,0,0);
@@ -64,18 +65,5 @@ class PerformanceRegistrationServiceTest {
         //then
         assertThatThrownBy(() -> performanceRegistrationService.registration(reservedTimePerformanceDto, producerId))
             .isInstanceOf(IllegalArgumentException.class);
-    }
-
-    PerformanceDto createPerformanceDto(Long venueId, int capacity, LocalDateTime startTime, LocalDateTime endTime,
-        String name, int normalPrice, int vipPrice) {
-        PerformanceDto performanceDto = new PerformanceDto();
-        performanceDto.setVenueId(venueId);
-        performanceDto.setCapacity(capacity);
-        performanceDto.setStartTime(startTime);
-        performanceDto.setEndTime(endTime);
-        performanceDto.setName(name);
-        performanceDto.setNormalPrice(normalPrice);
-        performanceDto.setVipPrice(vipPrice);
-        return performanceDto;
     }
 }
