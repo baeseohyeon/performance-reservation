@@ -1,10 +1,10 @@
 package com.numble.performancereservation.performance;
 
+import static com.numble.performancereservation.factory.DtoFactory.createPaymentDto;
+import static com.numble.performancereservation.factory.DtoFactory.createReservationSeatDtoList;
 import static org.assertj.core.api.Assertions.*;
 
 import com.numble.performancereservation.payment.PaymentDto;
-import com.numble.performancereservation.payment.PaymentMethod;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.junit.jupiter.api.Test;
@@ -69,21 +69,5 @@ public class PerformanceReservationServiceTest {
         assertThatThrownBy(
             () -> performanceReservationService.reservationPerformance(reservedSeatRequest, userId))
             .isInstanceOf(IllegalArgumentException.class);
-    }
-
-    PaymentDto createPaymentDto() {
-        PaymentMethod paymentMethod = PaymentMethod.CREDIT_CARD;
-        String cardNumber = "1234-1234-1234-1234";
-        String cardExpiration = "12/24";
-        int cardCVV = 123;
-        return new PaymentDto(paymentMethod, cardNumber, cardExpiration, cardCVV);
-    }
-
-    List<SeatDto> createReservationSeatDtoList() {
-        List<SeatDto> seats = new ArrayList<>();
-        for (int i = 1; i <= 5; i++) {
-            seats.add(new SeatDto((long) i, "A" + i, SeatType.VIP));
-        }
-        return seats;
     }
 }

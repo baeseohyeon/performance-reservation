@@ -21,7 +21,7 @@ public class PerformanceReservationService {
     private final PaymentService paymentService;
 
     public Reservation reservationPerformance(PerformanceReservationRequest request, Long userId) {
-        List<Long> seatIds = request.getSeats().stream().map(SeatDto::getSeatId).toList();
+        List<Long> seatIds = request.getSeatIds();
         seatService.validateSeatExistenceAndReservation(seatIds);
 
         User user = userService.findById(userId);

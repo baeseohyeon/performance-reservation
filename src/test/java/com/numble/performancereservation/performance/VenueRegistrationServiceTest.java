@@ -1,8 +1,8 @@
 package com.numble.performancereservation.performance;
 
+import static com.numble.performancereservation.factory.DtoFactory.createSeatDtoList;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import java.util.ArrayList;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -40,14 +40,5 @@ public class VenueRegistrationServiceTest {
         //then
         logger.info("batch insert execute time = {}", (end - start));
         assertThat(seatService.countByVenueId(venue.getId())).isEqualTo(seats.size());
-    }
-
-    List<SeatDto> createSeatDtoList() {
-        List<SeatDto> seats = new ArrayList<>();
-        int size = 10000;
-        for (int i = 0; i < size; i++) {
-            seats.add(new SeatDto(Integer.toString(i), SeatType.NORMAL));
-        }
-        return seats;
     }
 }
