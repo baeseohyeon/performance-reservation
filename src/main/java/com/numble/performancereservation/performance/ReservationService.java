@@ -24,4 +24,8 @@ public class ReservationService {
         return reservationRepository.findById(id)
             .orElseThrow(() -> new IllegalArgumentException(INVALID_RESERVATION_ID));
     }
+
+    public long countByPerformanceId(Long performanceId) {
+        return reservationRepository.countByPerformanceId(performanceId);
+    }
 }
