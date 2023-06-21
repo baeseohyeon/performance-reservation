@@ -16,7 +16,7 @@ public class PerformanceReservationService {
 
     private final ReservationService reservationService;
     private final SeatService seatService;
-    private final PerformanceService performanceService;
+    private final PerformanceQueryService performanceQueryService;
     private final UserService userService;
     private final PaymentService paymentService;
 
@@ -25,7 +25,8 @@ public class PerformanceReservationService {
         seatService.validateSeatExistenceAndReservation(seatIds);
 
         User user = userService.findById(userId);
-        Performance performance = performanceService.findById(request.getPerformanceId());
+        Performance performance = performanceQueryService.findById(request.getPerformanceId());
+        performance.decreaseAvailableSeats(seatIds.size());
         Payment payment = paymentService.saveIfNotFound(request.getPaymentDto());
         paymentService.processPayment();
 
