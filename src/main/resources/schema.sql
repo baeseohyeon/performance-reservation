@@ -17,7 +17,7 @@ create table payment
     created_at      timestamp(6) default current_timestamp(6),
     updated_at      timestamp(6) default current_timestamp(6) on update current_timestamp (6),
     primary key (id)
-);
+) engine=InnoDB;
 
 create table authority
 (
@@ -25,7 +25,7 @@ create table authority
     created_at timestamp(6) default current_timestamp(6),
     updated_at timestamp(6) default current_timestamp(6) on update current_timestamp (6),
     primary key (role)
-);
+) engine=InnoDB;
 
 create table performance
 (
@@ -40,8 +40,9 @@ create table performance
     user_id      bigint,
     venue_id     bigint,
     name         varchar(255),
+    available_seats integer not null,
     primary key (id)
-);
+) engine=InnoDB;
 
 create table reservation
 (
@@ -52,11 +53,11 @@ create table reservation
     performance_id bigint,
     user_id        bigint,
     primary key (id)
-);
+) engine=InnoDB;
 
 create table seat
 (
-    is_reserved    boolean,
+    is_reserved    boolean default false,
     created_at     timestamp(6) default current_timestamp(6),
     id             bigint AUTO_INCREMENT,
     reservation_id bigint,
@@ -65,14 +66,14 @@ create table seat
     number         varchar(255),
     type           varchar(255) check (type in ('VIP', 'NORMAL')),
     primary key (id)
-);
+) engine=InnoDB;
 
 create table user_authority
 (
     user_id bigint       not null,
     role    varchar(255) not null,
     primary key (user_id, role)
-);
+) engine=InnoDB;
 
 create table users
 (
@@ -86,7 +87,7 @@ create table users
     type             varchar(255) check (type in ('VENUE', 'PERFORMANCE')),
     username         varchar(255),
     primary key (id)
-);
+) engine=InnoDB;
 
 create table venue
 (
@@ -100,7 +101,7 @@ create table venue
     user_id    bigint,
     name       varchar(255),
     primary key (id)
-);
+) engine=InnoDB;
 
 alter table performance
     add constraint FKgnrih50e9vd2u791msuqhg73a

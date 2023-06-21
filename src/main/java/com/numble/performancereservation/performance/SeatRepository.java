@@ -9,7 +9,7 @@ import org.springframework.data.repository.query.Param;
 
 public interface SeatRepository extends JpaRepository<Seat, Long> {
 
-    long countByVenueId(Long venueId);
+    int countByVenueId(Long venueId);
 
     long countByIdIn(List<Long> ids);
 
@@ -21,4 +21,6 @@ public interface SeatRepository extends JpaRepository<Seat, Long> {
         @Param("reservation") Reservation reservation);
 
     long countByIdInAndIsReserved(List<Long> ids, boolean isReserved);
+
+    List<Seat> findByVenueId(Long venueId);
 }

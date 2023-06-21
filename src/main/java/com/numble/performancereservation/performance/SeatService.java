@@ -20,7 +20,7 @@ public class SeatService {
         seatJdbcRepository.saveAll(seats, venueId);
     }
 
-    public long countByVenueId(Long venueId) {
+    public int countByVenueId(Long venueId) {
         return seatRepository.countByVenueId(venueId);
     }
 
@@ -47,5 +47,9 @@ public class SeatService {
 
     public long countReservedSeatByIdIn(List<Long> seatIds) {
         return seatRepository.countByIdInAndIsReserved(seatIds, true);
+    }
+
+    public List<Seat> findSeatsByVenueId(Long venueId){
+        return seatRepository.findByVenueId(venueId);
     }
 }

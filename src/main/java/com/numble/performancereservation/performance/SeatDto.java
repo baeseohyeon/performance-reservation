@@ -19,4 +19,10 @@ public class SeatDto {
         this.number = number;
         this.type = type;
     }
+
+    public SeatDto(Seat seat) {
+        seatId = seat.getId();
+        number = seat.getNumber();
+        type = seat.getType();
+    }
 }

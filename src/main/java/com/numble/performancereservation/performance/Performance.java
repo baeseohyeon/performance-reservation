@@ -20,10 +20,12 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Performance extends BaseEntity {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private int capacity;
+    private int availableSeats;
     @Embedded
     private PerformanceDateTime dateTime;
     @Embedded
@@ -36,13 +38,18 @@ public class Performance extends BaseEntity {
     private User user;
 
     @Builder
-    public Performance(User user, Venue venue, String name, int capacity,
+    public Performance(User user, Venue venue, String name, int capacity, int availableSeats,
         PerformanceDateTime dateTime, PerformancePrice price) {
         this.user = user;
         this.venue = venue;
         this.name = name;
         this.capacity = capacity;
+        this.availableSeats = availableSeats;
         this.dateTime = dateTime;
         this.price = price;
+    }
+
+    public void decreaseAvailableSeats(int size) {
+        availableSeats = availableSeats >= size ? availableSeats - size : availableSeats;
     }
 }
