@@ -13,4 +13,11 @@ public interface PerformanceRepository extends JpaRepository<Performance, Long> 
         + "(p.end_time between :startTime and :endTime) or "
         + "(:startTime >= p.start_time and :endTime <= p.end_time) limit 1", nativeQuery = true)
     boolean existsByVenueIdAndStartTimeAndEndTime(@Param("venueId") Long venueId, @Param("startTime") LocalDateTime startTime, @Param("endTime") LocalDateTime endTime);
+
+    @Query(value = "select count(*) from Performance p "
+        + "where p.venue_id = :venueId and "
+        + "(p.start_time between :startTime and :endTime) or "
+        + "(p.end_time between :startTime and :endTime) or "
+        + "(:startTime >= p.start_time and :endTime <= p.end_time) limit 1", nativeQuery = true)
+    int countByVenueIdAndStartTimeAndEndTime(@Param("venueId") Long venueId, @Param("startTime") LocalDateTime startTime, @Param("endTime") LocalDateTime endTime);
 }

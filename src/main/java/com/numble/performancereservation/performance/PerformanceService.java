@@ -33,8 +33,8 @@ public class PerformanceService {
 
     public void validatePerformanceTimeReserved(Venue venue, LocalDateTime startTime,
         LocalDateTime endTime) {
-        if (performanceRepository.existsByVenueIdAndStartTimeAndEndTime(venue.getId(), startTime,
-            endTime)) {
+        if (performanceRepository.countByVenueIdAndStartTimeAndEndTime(venue.getId(), startTime,
+            endTime) > 0) {
             throw new IllegalArgumentException(ALREADY_RESERVED_DURATION);
         }
     }
