@@ -17,7 +17,7 @@ class PerformanceRegistrationServiceTest {
     @Autowired
     PerformanceRegistrationService performanceRegistrationService;
     @Autowired
-    PerformanceService performanceService;
+    PerformanceQueryService performanceQueryService;
 
     @Test
     void registrationPerformance() {
@@ -37,7 +37,7 @@ class PerformanceRegistrationServiceTest {
         Performance performance = performanceRegistrationService.registration(performanceDto, producerId);
 
         //then
-        Performance findPerformance = performanceService.findById(performance.getId());
+        Performance findPerformance = performanceQueryService.findById(performance.getId());
         assertThat(performance.getId()).isEqualTo(findPerformance.getId());
     }
 
