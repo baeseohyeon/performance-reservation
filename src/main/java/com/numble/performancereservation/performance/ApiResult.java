@@ -11,4 +11,8 @@ public class ApiResult<T> {
 
     long count;
     T result;
+
+    public ApiResult(T result) {
+        this.result = result;
+    }
 }
