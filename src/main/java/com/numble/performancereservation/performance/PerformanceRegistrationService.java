@@ -15,12 +15,15 @@ public class PerformanceRegistrationService {
     private final PerformanceService performanceService;
     private final VenueService venueService;
     private final UserService userService;
+    private final SeatService seatService;
 
     public Performance registration(PerformanceDto performanceDto, Long userId) {
         User user = userService.findProducerByIdAndType(userId, ProducerType.PERFORMANCE);
         Venue venue = venueService.findById(performanceDto.getVenueId());
         validatePerformanceTime(venue, performanceDto);
-        return performanceService.save(user, venue, performanceDto);
+
+        int availableSeats = seatService.countByVenueId(venue.getId());
+        return performanceService.save(user, venue, performanceDto, availableSeats);
     }
 
     private void validatePerformanceTime(Venue venue, PerformanceDto performanceDto) {
