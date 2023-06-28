@@ -48,7 +48,7 @@ class PerformanceRegistrationServiceTest {
         Long venueId = 1L;
         int capacity = 10000;
         LocalDateTime startTime = LocalDateTime.of(2023,6,17,10,0,0);
-        LocalDateTime endTime = startTime.plusHours(1);
+        LocalDateTime endTime = startTime.plusHours(2);
         String name = "bae hall";
         int normalPrice = 10000;
         int vipPrice = 50000;
