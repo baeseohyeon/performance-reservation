@@ -11,8 +11,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicLong;
 import org.junit.jupiter.api.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
@@ -29,7 +27,6 @@ public class ConcurrentPerformanceReservationServiceTest {
     SeatService seatService;
     @Autowired
     ReservationRepository reservationRepository;
-    Logger log = LoggerFactory.getLogger(getClass().getName());
 
     @Test
     void reservationPerformance() throws InterruptedException {
@@ -52,7 +49,6 @@ public class ConcurrentPerformanceReservationServiceTest {
                     performanceReservationService.reservationPerformance(request,
                         atomicLong.getAndIncrement());
                 } catch (IllegalArgumentException e) {
-                    log.info("exception = {}",e.getMessage());
                 } finally {
                     countDownLatch.countDown();
                 }
