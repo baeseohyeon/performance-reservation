@@ -25,6 +25,8 @@ dependencies {
     // https://mvnrepository.com/artifact/org.redisson/redisson-spring-boot-starter
 	implementation 'org.redisson:redisson-spring-boot-starter:3.22.0'
 	implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.9.0'
+	// https://mvnrepository.com/artifact/org.testcontainers/testcontainers
+	testImplementation 'org.testcontainers:testcontainers:1.18.3'
 
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'com.h2database:h2'
