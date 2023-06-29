@@ -14,11 +14,11 @@ public class ReservationSeatJdbcRepository {
 
     private final JdbcTemplate jdbcTemplate;
 
-    public void saveAll(List<SeatDto> seats, Long reservationId) {
+    public void saveAll(List<Long> seatIds, Long reservationId) {
         String sql = "insert into reservation_seat (seat_id, reservation_id) values (?, ?)";
-        jdbcTemplate.batchUpdate(sql, seats, seats.size(),
-            (PreparedStatement ps, SeatDto seat) -> {
-                ps.setLong(1, seat.getSeatId());
+        jdbcTemplate.batchUpdate(sql, seatIds, seatIds.size(),
+            (PreparedStatement ps, Long seatId) -> {
+                ps.setLong(1, seatId);
                 ps.setLong(2, reservationId);
             });
     }
