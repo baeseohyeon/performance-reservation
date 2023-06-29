@@ -1,5 +1,6 @@
 drop table if exists seat cascade;
 drop table if exists reservation cascade;
+drop table if exists reservation_seat cascade;
 drop table if exists performance cascade;
 drop table if exists venue cascade;
 drop table if exists user_authority cascade;
@@ -57,14 +58,22 @@ create table reservation
 
 create table seat
 (
-    is_reserved    boolean default false,
-    created_at     timestamp(6) default current_timestamp(6),
+    created_at timestamp(6) default current_timestamp(6),
+    id         bigint AUTO_INCREMENT,
+    updated_at timestamp(6) default current_timestamp(6) on update current_timestamp (6),
+    venue_id   bigint,
+    number     varchar(255),
+    type       varchar(255) check (type in ('VIP', 'NORMAL')),
+    primary key (id)
+) engine=InnoDB;
+
+create table reservation_seat
+(
     id             bigint AUTO_INCREMENT,
+    seat_id     bigint,
     reservation_id bigint,
-    updated_at     timestamp(6) default current_timestamp(6) on update current_timestamp (6),
-    venue_id       bigint,
-    number         varchar(255),
-    type           varchar(255) check (type in ('VIP', 'NORMAL')),
+    created_at     timestamp(6) default current_timestamp(6),
+    updated_at     timestamp(6) DEFAULT current_timestamp(6) ON UPDATE current_timestamp (6),
     primary key (id)
 ) engine=InnoDB;
 
@@ -129,11 +138,6 @@ alter table reservation
             references users (id);
 
 alter table seat
-    add constraint FK6voxk3ppixqgl102dbf4ccuuh
-        foreign key (reservation_id)
-            references reservation (id);
-
-alter table seat
     add constraint FKkt7mgkoowgxocqf3844m53i8q
         foreign key (venue_id)
             references venue (id);
@@ -152,3 +156,13 @@ alter table venue
     add constraint FK3y4akt1tbhmxnivjldiem1dam
         foreign key (user_id)
             references users (id);
+
+alter table reservation_seat
+    add constraint FKmppl4hty8sagbei7ywefv0qxy
+        foreign key (reservation_id)
+            references reservation (id);
+
+alter table reservation_seat
+    add constraint FKbdrctobcg03ls3djj77hxh9h6
+        foreign key (seat_id)
+            references seat (id);

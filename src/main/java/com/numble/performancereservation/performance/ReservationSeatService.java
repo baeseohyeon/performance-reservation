@@ -11,8 +11,13 @@ import org.springframework.transaction.annotation.Transactional;
 public class ReservationSeatService {
 
     private final ReservationSeatJdbcRepository reservationSeatJdbcRepository;
+    private final ReservationSeatRepository reservationSeatRepository;
 
-    public void saveAll(List<SeatDto> seats, Reservation reservation) {
-        reservationSeatJdbcRepository.saveAll(seats, reservation.getId());
+    public void saveAll(List<Long> seatIds, Reservation reservation) {
+        reservationSeatJdbcRepository.saveAll(seatIds, reservation.getId());
+    }
+
+    public long countByReservation(Reservation reservation) {
+        return reservationSeatRepository.countByReservation(reservation);
     }
 }

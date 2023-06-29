@@ -22,6 +22,8 @@ public class PerformanceReservationServiceTest {
     ReservationService reservationService;
     @Autowired
     SeatService seatService;
+    @Autowired
+    ReservationSeatService reservationSeatService;
 
     @Test
     void reservationPerformance() {
@@ -42,8 +44,7 @@ public class PerformanceReservationServiceTest {
         Reservation findReservation = reservationService.findById(reservation.getId());
         assertThat(reservation.getId()).isEqualTo(findReservation.getId());
 
-        long reservedSeatCount = seatService.countReservedSeatByIdIn(
-            seats.stream().map(SeatDto::getSeatId).collect(Collectors.toList()));
+        long reservedSeatCount = reservationSeatService.countByReservation(findReservation);
         assertThat(reservedSeatCount).isEqualTo(seats.size());
     }
 

@@ -1,9 +1,11 @@
 package com.numble.performancereservation.performance;
 
+import static com.numble.performancereservation.exception.ExceptionMessage.ALREADY_RESERVED_SEAT;
 import static com.numble.performancereservation.exception.ExceptionMessage.INVALID_RESERVATION_ID;
 
 import com.numble.performancereservation.payment.Payment;
 import com.numble.performancereservation.user.User;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,5 +29,11 @@ public class ReservationService {
 
     public long countByPerformanceId(Long performanceId) {
         return reservationRepository.countByPerformanceId(performanceId);
+    }
+
+    public void validateSeatAlreadyReserved(Long performanceId, List<Long> seatIds) {
+        if(reservationRepository.existsByReservationAndSeatIdIn(performanceId, seatIds)) {
+            throw new IllegalArgumentException(ALREADY_RESERVED_SEAT);
+        }
     }
 }
