@@ -19,10 +19,12 @@ public class PerformanceReservationService {
     private final PerformanceQueryService performanceQueryService;
     private final UserService userService;
     private final PaymentService paymentService;
+    private final ReservationSeatService reservationSeatService;
 
     public Reservation reservationPerformance(PerformanceReservationRequest request, Long userId) {
         List<Long> seatIds = request.getSeatIds();
-        seatService.validateSeatExistenceAndReservation(seatIds);
+        seatService.validateSeatExistence(seatIds);
+        reservationService.validateSeatAlreadyReserved(request.getPerformanceId(), seatIds);
 
         User user = userService.findById(userId);
         Performance performance = performanceQueryService.findById(request.getPerformanceId());
@@ -31,7 +33,7 @@ public class PerformanceReservationService {
         paymentService.processPayment();
 
         Reservation reservation = reservationService.save(user, performance, payment);
-        seatService.reservationSeat(seatIds, reservation);
+        reservationSeatService.saveAll(seatIds, reservation);
         return reservation;
     }
 }
