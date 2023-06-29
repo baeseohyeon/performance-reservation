@@ -1,5 +1,6 @@
 drop table if exists seat cascade;
 drop table if exists reservation cascade;
+drop table if exists reservation_seat cascade;
 drop table if exists performance cascade;
 drop table if exists venue cascade;
 drop table if exists user_authority cascade;
@@ -65,6 +66,16 @@ create table seat
     venue_id       bigint,
     number         varchar(255),
     type           varchar(255) check (type in ('VIP', 'NORMAL')),
+    primary key (id)
+) engine=InnoDB;
+
+create table reservation_seat
+(
+    id             bigint AUTO_INCREMENT,
+    seat_id     bigint,
+    reservation_id bigint,
+    created_at     timestamp(6) default current_timestamp(6),
+    updated_at     timestamp(6) DEFAULT current_timestamp(6) ON UPDATE current_timestamp (6),
     primary key (id)
 ) engine=InnoDB;
 
