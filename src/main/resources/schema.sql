@@ -1,6 +1,6 @@
+drop table if exists reservation_seat cascade;
 drop table if exists seat cascade;
 drop table if exists reservation cascade;
-drop table if exists reservation_seat cascade;
 drop table if exists performance cascade;
 drop table if exists venue cascade;
 drop table if exists user_authority cascade;
