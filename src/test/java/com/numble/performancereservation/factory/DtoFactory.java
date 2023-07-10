@@ -33,10 +33,10 @@ public class DtoFactory {
         return new PaymentDto(paymentMethod, cardNumber, cardExpiration, cardCVV);
     }
 
-    public static List<SeatDto> createReservationSeatDtoList() {
+    public static List<SeatDto> createReservationSeatDtoList(List<String> numbers) {
         List<SeatDto> seats = new ArrayList<>();
-        for (int i = 1; i <= 5; i++) {
-            seats.add(new SeatDto((long) i, "A" + i, SeatType.VIP));
+        for (int i = 0; i < numbers.size(); i++) {
+            seats.add(new SeatDto((long) (i+1), numbers.get(i) + (i+1), SeatType.VIP));
         }
         return seats;
     }
