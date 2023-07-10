@@ -31,7 +31,7 @@ public class PerformanceReservationServiceTest {
         Long performanceId = 1L;
         int totalPrice = 200000;
         PaymentDto paymentDto = createPaymentDto();
-        List<SeatDto> seats = createReservationSeatDtoList();
+        List<SeatDto> seats = createReservationSeatDtoList(List.of("A"));
         PerformanceReservationRequest request = new PerformanceReservationRequest(performanceId,
             totalPrice, paymentDto, seats);
         Long userId = 1L;
@@ -54,15 +54,14 @@ public class PerformanceReservationServiceTest {
         Long performanceId = 1L;
         int totalPrice = 200000;
         PaymentDto paymentDto = createPaymentDto();
-        List<SeatDto> seats = createReservationSeatDtoList();
+        List<SeatDto> seats = createReservationSeatDtoList(List.of("F","G"));
         PerformanceReservationRequest request = new PerformanceReservationRequest(performanceId,
             totalPrice, paymentDto, seats);
         Long userId = 1L;
         performanceReservationService.reservationPerformance(request, userId);
 
         //when
-        seats.clear();
-        seats.add(new SeatDto(1L, "A1", SeatType.VIP));
+        seats = createReservationSeatDtoList(List.of("F"));
         PerformanceReservationRequest reservedSeatRequest = new PerformanceReservationRequest(
             performanceId, totalPrice, paymentDto, seats);
 
