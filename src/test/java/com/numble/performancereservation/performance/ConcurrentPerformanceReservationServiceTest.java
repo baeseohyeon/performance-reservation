@@ -34,7 +34,7 @@ public class ConcurrentPerformanceReservationServiceTest {
         Long performanceId = 1L;
         int totalPrice = 200000;
         PaymentDto paymentDto = createPaymentDto();
-        List<SeatDto> seats = createReservationSeatDtoList();
+        List<SeatDto> seats = createReservationSeatDtoList(List.of("A","B","C"));
         PerformanceReservationRequest request = new PerformanceReservationRequest(performanceId,
             totalPrice, paymentDto, seats);
 
