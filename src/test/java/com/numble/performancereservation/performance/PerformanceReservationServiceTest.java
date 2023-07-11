@@ -5,8 +5,12 @@ import static com.numble.performancereservation.factory.DtoFactory.createReserva
 import static org.assertj.core.api.Assertions.*;
 
 import com.numble.performancereservation.payment.PaymentDto;
+import com.numble.performancereservation.reservation.Reservation;
+import com.numble.performancereservation.reservation.ReservationSeatService;
+import com.numble.performancereservation.reservation.ReservationService;
+import com.numble.performancereservation.seat.SeatDto;
+import com.numble.performancereservation.seat.SeatService;
 import java.util.List;
-import java.util.stream.Collectors;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

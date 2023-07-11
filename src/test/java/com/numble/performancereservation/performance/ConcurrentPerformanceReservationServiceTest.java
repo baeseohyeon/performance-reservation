@@ -5,6 +5,10 @@ import static com.numble.performancereservation.factory.DtoFactory.createReserva
 import static org.assertj.core.api.Assertions.assertThat;
 
 import com.numble.performancereservation.payment.PaymentDto;
+import com.numble.performancereservation.reservation.ReservationRepository;
+import com.numble.performancereservation.reservation.ReservationService;
+import com.numble.performancereservation.seat.SeatDto;
+import com.numble.performancereservation.seat.SeatService;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;

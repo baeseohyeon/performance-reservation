@@ -1,4 +1,4 @@
-package com.numble.performancereservation.performance;
+package com.numble.performancereservation.venue;
 
 import static com.numble.performancereservation.exception.ExceptionMessage.PERFORMANCE_TIME_MUST_WITHIN_VENUE_USE_TIME;
 

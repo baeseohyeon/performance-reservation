@@ -1,8 +1,8 @@
-package com.numble.performancereservation.performance;
+package com.numble.performancereservation.exception;
 
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
 
-import com.numble.performancereservation.exception.RLockUnAvailableException;
+import com.numble.performancereservation.common.ApiResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;

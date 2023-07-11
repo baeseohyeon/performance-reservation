@@ -3,6 +3,7 @@ package com.numble.performancereservation.performance;
 import static com.numble.performancereservation.exception.ExceptionMessage.ALREADY_RESERVED_DURATION;
 
 import com.numble.performancereservation.user.User;
+import com.numble.performancereservation.venue.Venue;
 import java.time.LocalDateTime;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

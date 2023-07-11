@@ -1,6 +1,7 @@
 package com.numble.performancereservation.performance;
 
 import com.numble.performancereservation.payment.PaymentDto;
+import com.numble.performancereservation.seat.SeatDto;
 import java.util.List;
 import java.util.stream.Collectors;
 import lombok.AllArgsConstructor;

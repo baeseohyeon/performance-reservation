@@ -2,6 +2,10 @@ package com.numble.performancereservation.performance;
 
 import com.numble.performancereservation.payment.Payment;
 import com.numble.performancereservation.payment.PaymentService;
+import com.numble.performancereservation.reservation.Reservation;
+import com.numble.performancereservation.reservation.ReservationSeatService;
+import com.numble.performancereservation.reservation.ReservationService;
+import com.numble.performancereservation.seat.SeatService;
 import com.numble.performancereservation.user.User;
 import com.numble.performancereservation.user.UserService;
 import java.util.List;

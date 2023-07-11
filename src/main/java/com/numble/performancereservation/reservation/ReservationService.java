@@ -1,9 +1,10 @@
-package com.numble.performancereservation.performance;
+package com.numble.performancereservation.reservation;
 
 import static com.numble.performancereservation.exception.ExceptionMessage.ALREADY_RESERVED_SEAT;
 import static com.numble.performancereservation.exception.ExceptionMessage.INVALID_RESERVATION_ID;
 
 import com.numble.performancereservation.payment.Payment;
+import com.numble.performancereservation.performance.Performance;
 import com.numble.performancereservation.user.User;
 import java.util.List;
 import lombok.RequiredArgsConstructor;

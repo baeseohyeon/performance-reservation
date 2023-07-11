@@ -3,6 +3,7 @@ package com.numble.performancereservation.performance;
 import static com.numble.performancereservation.exception.ExceptionMessage.UNABLE_TO_HOLD_LOCK;
 
 import com.numble.performancereservation.exception.RLockUnAvailableException;
+import com.numble.performancereservation.reservation.Reservation;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import lombok.RequiredArgsConstructor;

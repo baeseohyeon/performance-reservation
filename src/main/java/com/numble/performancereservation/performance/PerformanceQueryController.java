@@ -1,5 +1,6 @@
 package com.numble.performancereservation.performance;
 
+import com.numble.performancereservation.common.ApiResult;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
