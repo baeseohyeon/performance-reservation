@@ -1,4 +1,4 @@
-package com.numble.performancereservation.performance;
+package com.numble.performancereservation.seat;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

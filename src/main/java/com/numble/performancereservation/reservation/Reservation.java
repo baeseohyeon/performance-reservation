@@ -1,7 +1,8 @@
-package com.numble.performancereservation.performance;
+package com.numble.performancereservation.reservation;
 
 import com.numble.performancereservation.base.BaseEntity;
 import com.numble.performancereservation.payment.Payment;
+import com.numble.performancereservation.performance.Performance;
 import com.numble.performancereservation.user.User;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;

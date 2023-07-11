@@ -1,5 +1,6 @@
-package com.numble.performancereservation.performance;
+package com.numble.performancereservation.reservation;
 
+import com.numble.performancereservation.seat.Seat;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;

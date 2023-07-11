@@ -2,6 +2,7 @@ package com.numble.performancereservation.performance;
 
 import com.numble.performancereservation.base.BaseEntity;
 import com.numble.performancereservation.user.User;
+import com.numble.performancereservation.venue.Venue;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;

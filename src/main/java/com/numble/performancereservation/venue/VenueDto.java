@@ -1,5 +1,6 @@
-package com.numble.performancereservation.performance;
+package com.numble.performancereservation.venue;
 
+import com.numble.performancereservation.seat.SeatDto;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.AllArgsConstructor;

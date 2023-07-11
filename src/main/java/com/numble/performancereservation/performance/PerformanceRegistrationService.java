@@ -1,8 +1,11 @@
 package com.numble.performancereservation.performance;
 
+import com.numble.performancereservation.seat.SeatService;
 import com.numble.performancereservation.user.ProducerType;
 import com.numble.performancereservation.user.User;
 import com.numble.performancereservation.user.UserService;
+import com.numble.performancereservation.venue.Venue;
+import com.numble.performancereservation.venue.VenueService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

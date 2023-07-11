@@ -1,8 +1,14 @@
-package com.numble.performancereservation.performance;
+package com.numble.performancereservation.venue;
 
 import static com.numble.performancereservation.factory.DtoFactory.createSeatDtoList;
 import static org.assertj.core.api.Assertions.assertThat;
 
+import com.numble.performancereservation.seat.SeatDto;
+import com.numble.performancereservation.seat.SeatService;
+import com.numble.performancereservation.venue.Venue;
+import com.numble.performancereservation.venue.VenueDto;
+import com.numble.performancereservation.venue.VenueRegistrationService;
+import com.numble.performancereservation.venue.VenueType;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;

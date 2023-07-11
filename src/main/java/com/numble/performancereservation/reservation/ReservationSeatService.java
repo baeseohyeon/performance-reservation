@@ -1,4 +1,4 @@
-package com.numble.performancereservation.performance;
+package com.numble.performancereservation.reservation;
 
 import java.util.List;
 import lombok.RequiredArgsConstructor;

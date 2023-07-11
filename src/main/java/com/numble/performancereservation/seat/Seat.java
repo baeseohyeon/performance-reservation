@@ -1,6 +1,7 @@
-package com.numble.performancereservation.performance;
+package com.numble.performancereservation.seat;
 
 import com.numble.performancereservation.base.BaseEntity;
+import com.numble.performancereservation.venue.Venue;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;

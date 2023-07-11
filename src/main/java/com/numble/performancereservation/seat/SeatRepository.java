@@ -1,4 +1,4 @@
-package com.numble.performancereservation.performance;
+package com.numble.performancereservation.seat;
 
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;

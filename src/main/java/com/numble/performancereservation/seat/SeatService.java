@@ -1,4 +1,4 @@
-package com.numble.performancereservation.performance;
+package com.numble.performancereservation.seat;
 
 import static com.numble.performancereservation.exception.ExceptionMessage.INVALID_SEAT_ID;
 

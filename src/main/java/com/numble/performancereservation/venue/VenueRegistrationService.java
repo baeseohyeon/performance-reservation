@@ -1,5 +1,6 @@
-package com.numble.performancereservation.performance;
+package com.numble.performancereservation.venue;
 
+import com.numble.performancereservation.seat.SeatService;
 import com.numble.performancereservation.user.ProducerType;
 import com.numble.performancereservation.user.User;
 import com.numble.performancereservation.user.UserService;

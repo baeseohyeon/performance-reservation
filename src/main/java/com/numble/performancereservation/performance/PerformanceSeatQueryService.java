@@ -1,5 +1,7 @@
 package com.numble.performancereservation.performance;
 
+import com.numble.performancereservation.seat.Seat;
+import com.numble.performancereservation.seat.SeatService;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

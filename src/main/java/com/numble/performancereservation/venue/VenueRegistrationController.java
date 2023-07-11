@@ -1,4 +1,4 @@
-package com.numble.performancereservation.performance;
+package com.numble.performancereservation.venue;
 
 import static org.springframework.http.HttpStatus.CREATED;
 
